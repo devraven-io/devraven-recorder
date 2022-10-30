@@ -7,7 +7,7 @@ Just start recording and go through your browser flow, the recorder will automat
 ## Features
 
 - Captures mouse interactions including click, hover, double-click.
-- Captures data inputs to input fields such as text fields, password, single and multi-select fiels and textarea fields.
+- Captures data inputs to input fields such as text fields, password, single and multi-select fields and textarea fields.
 - Captures interactions with checkboxes and radio boxes
 - Captures keystokes including Meta(Command), CTRL, ALT (Option) keys.
 - Detects page navigations such as full web page, SPA or hash change events and automatically waits for navigation to complete.
@@ -20,7 +20,7 @@ Just start recording and go through your browser flow, the recorder will automat
 
 ## Installation
 
-This chrome extension will be available on Chrome Web Store very soon, following the review process. However, you may follow the steps below to side-load the plugin.
+This chrome extension will be available on Chrome Web Store very soon, following the review and publishing process. However, you may follow the steps below to side-load the extension to your browser instances.
 
 1. Download the [latest build zip](https://github.com/devraven-io/devraven-recorder/releases/download/v1.0/build.zip) file and extract the zip file on your machine.
 2. Navigate to chrome://extensions on your Chrome browser.
