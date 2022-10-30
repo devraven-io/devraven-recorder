@@ -1,0 +1,51 @@
+body {
+  width: 300px;
+  height: 175px;
+  margin: 0;
+  font-family: Avenir, Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.app {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  padding: 10px;
+  background-color: #FFFFFF;
+
+  .app-header {
+    margin-bottom: 10px;
+  }
+
+  .app-logo {
+    max-height: 24px;
+    pointer-events: none;
+  }
+
+  .app-body {
+    text-align: center;
+  }
+
+}
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+
+  .action-icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+  }
+
+  .action-label {
+    font-size: 1rem;
+  }
+}

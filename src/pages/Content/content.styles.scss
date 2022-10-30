@@ -1,0 +1,138 @@
+.overlay {
+    font-family: Avenir, Verdana, Geneva, Tahoma, sans-serif;
+    width: 700px;
+    bottom: 10px;
+    background: #fff;
+    left: calc(50% - 350px);
+    z-index: 2147483647;
+    position: fixed;
+    border-radius: 5px;
+    color: #333;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+
+}
+
+
+.overlay {
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .expand {
+        cursor: pointer;
+
+        svg {
+            width: 16px;
+        }
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .left-section {
+            display: flex;
+        }
+
+        .right-section {
+            display: block;
+        }
+
+        .icon {
+            width: 75px;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid #dbdbdb;
+            cursor: pointer;
+            margin-right: 5px;
+            background-color: #efefef;
+            color: #000;
+            font-family: Avenir, Verdana, Geneva, Tahoma, sans-serif;
+
+            &:hover {
+                border-color: #666;
+            }
+
+            svg {
+                margin: 0 auto;
+                width: 24px;
+                height: 24px;
+            }
+
+            .label {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .selector,
+    .last-event {
+        font-size: 11px;
+        overflow: hidden;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+        border-top: 1px solid #dbdbdb;
+
+        .tab {
+            border: none;
+            background: transparent;
+            padding: 0.5rem 0;
+            margin-right: 0.5rem;
+            font-family: Avenir, Verdana, Geneva, Tahoma, sans-serif;
+
+            &.is-active {
+                font-weight: bold;
+            }
+
+            &:not(.is-active) {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .event-list {
+        font-size: 11px;
+        max-height: 300px;
+        overflow: scroll;
+
+        .event-row {
+            padding: 5px;
+            background-color: #efefef;
+            border: 1px solid #dbdbdb;
+            margin-bottom: 5px;
+        }
+    }
+
+    .code {
+        max-height: 300px;
+        overflow: scroll;
+        border-top: 1px solid #efefef;
+        opacity: 1;
+        font-family: 'Courier New', Courier, monospace;
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            padding: 0px;
+        }
+    }
+}
+
+.highlighter {
+    background-color: #ff0000;
+    opacity: 0.4;
+    position: fixed;
+    pointer-events: none;
+    z-index: 2147483646;
+}

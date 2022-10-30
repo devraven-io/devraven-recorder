@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "DevRaven Recorder",
+  "version": "1.0",
+  "description": "Record browser interactions to create Playwright Tests and setup Synthetic Monitoring",
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": [
+    "activeTab",
+    "webNavigation",
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-34.png"
+  },
+  "icons": {
+    "128": "icon-128.png",
+    "64": "icon-64.png",
+    "32": "icon-32.png",
+    "16": "icon-16.png"
+  }
+}
