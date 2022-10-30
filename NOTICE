@@ -2,10 +2,10 @@ Copyright 2022 DevRaven Inc.
 
 Credits:
 
-- The chrome extension is inspired by [DeploySentinel Recorder](https://github.com/DeploySentinel/Recorder) which is available under Apache 2.0 license. It is fair to assume that this repo may include code derived from DeploySentinel Recorder.
+- The chrome extension is inspired by DeploySentinel Recorder(https://github.com/DeploySentinel/Recorder) which is available under Apache 2.0 license. It is fair to assume that this repo may include code derived from DeploySentinel Recorder.
 
-- Icons from [Heroicons](https://heroicons.com/) available under MIT license.
+- Icons from Heroicons(https://heroicons.com/) available under MIT license.
 
-- The repo uses [Chrome Extension Boilerplate with React 17 and Webpack 5](https://github.com/lxieyang/chrome-extension-boilerplate-react) available under MIT license.
+- The repo uses Chrome Extension Boilerplate with React 17 and Webpack 5(https://github.com/lxieyang/chrome-extension-boilerplate-react) available under MIT license.
 
 - Other third-party libraries used by this project are defined in package.json file.
