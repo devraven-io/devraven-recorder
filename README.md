@@ -33,4 +33,4 @@ This chrome extension will be available on Chrome Web Store very soon, following
 
 ## Known Issues
 
-Refer issues[https://github.com/devraven-io/devraven-recorder/issues] for known issues and upcoming enhancements.
+Refer [Issues](https://github.com/devraven-io/devraven-recorder/issues) for known issues and upcoming enhancements.
