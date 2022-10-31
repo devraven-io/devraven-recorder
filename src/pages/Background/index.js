@@ -8,15 +8,32 @@ const menu = {
 }
 
 function navListener(details) {
+
     if (details?.parentFrameId !== -1) {
         return;
     }
 
-    RecordingHelper.addEvent({
+    RecordingHelper.addNavEvent({
         type: 'navigation',
         url: details?.url
     });
 }
+
+function fullPageNavListener(navDetails) {
+    if (navDetails?.parentFrameId !== -1) {
+        return;
+    }
+
+    RecordingHelper.getRecording().then(recording => {
+        if (recording?.tabId && recording?.tabId === navDetails.tabId) {
+            RecordingHelper.addEvent({
+                type: 'navigation',
+                url: navDetails?.url
+            });
+        }
+    });
+}
+
 
 function storageListener(changes) {
     //recording stopped or cleared, remove context menu and remove listeners
@@ -28,7 +45,7 @@ function storageListener(changes) {
         chrome.webNavigation.onReferenceFragmentUpdated.removeListener(navListener);
 
         //full page navigation
-        chrome.webNavigation.onCompleted.removeListener(navListener);
+        chrome.webNavigation.onCompleted.removeListener(fullPageNavListener);
     } else {
         //when the recording starts, setup the context menu and add listeners
         ContextMenuLoader.setupContextMenu(menu);
@@ -39,7 +56,7 @@ function storageListener(changes) {
         chrome.webNavigation.onReferenceFragmentUpdated.addListener(navListener);
 
         //full page navigation
-        chrome.webNavigation.onCompleted.addListener(navListener);
+        chrome.webNavigation.onCompleted.addListener(fullPageNavListener);
     }
 }
 
@@ -61,7 +78,6 @@ function contextMenuListener(info, tab) {
 //handles page refreshes or full page navigations when a recording is in progress
 //check if the tab currently being recorded is refreshed and relaunch the recorder
 chrome.webNavigation.onCompleted.addListener(async (navDetails) => {
-    console.log('details');
     //load only on top frame
     if (navDetails.parentFrameId === -1) {
         await RecordingHelper.getRecording().then(recording => {

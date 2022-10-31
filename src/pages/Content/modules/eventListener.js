@@ -100,7 +100,6 @@ class EventListener {
     }
 
     start() {
-        console.log('starting event listener');
         window.addEventListener('click', this._clickListener, true);
         window.addEventListener('dblclick', this._doubleClickListener, true);
         window.addEventListener('input', this._inputListener, true);
@@ -110,7 +109,6 @@ class EventListener {
     }
 
     stop() {
-        console.log('stopping event listener');
         window.removeEventListener('click', this._clickListener, true);
         window.removeEventListener('dblclick', this._doubleClickListener, true);
         window.removeEventListener('input', this._inputListener, true);

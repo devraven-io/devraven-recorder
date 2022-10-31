@@ -23,7 +23,6 @@ class CodeGenerator {
 
     process(events) {
         this._setup();
-        console.log(events);
 
         for (let i = 0; i < events.length; i++) {
             const nextEvent = (i + 1 < events.length) ? events[i + 1] : null;

@@ -11,7 +11,8 @@ const RecordingHelper = {
                 type: 'goto',
                 value: tab?.url || 'about:blank',
                 width: tab.width,
-                height: tab.height
+                height: tab.height,
+                timestamp: new Date().getTime()
             }]
         });
         chrome.storage.local.set({
@@ -116,7 +117,23 @@ const RecordingHelper = {
     }, 50, {
         'leading': true,
         'trailing': false
-    })
+    }),
+    addNavEvent: (event) => {
+        //spa, hash nav events are instantaneous and should not be debounce. 
+        //However click + navigation can cause a race condition which can be handled by delaying nav event captures by 50ms
+        if (event?.type === 'navigation') {
+            event.timestamp = new Date().getTime();
+            setTimeout(() => {
+                RecordingHelper.getRecording().then(recording => {
+                    let events = recording.getEvents();
+                    recording.events = [...events, event]
+                    chrome.storage.local.set({
+                        [RECORDING_KEY]: recording
+                    });
+                });
+            }, 50);
+        }
+    }
 }
 
 
