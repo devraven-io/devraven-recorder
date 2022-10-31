@@ -106,7 +106,7 @@ const RecordingHelper = {
                     //on launch user navigating to different url, update the goto url value
                     lastEvent.value = event.url;
                 } else {
-                    recording.events = [...events, event]
+                    recording.events.push(event);
                 }
 
                 chrome.storage.local.set({
@@ -120,18 +120,11 @@ const RecordingHelper = {
     }),
     addNavEvent: (event) => {
         //spa, hash nav events are instantaneous and should not be debounce. 
-        //However click + navigation can cause a race condition which can be handled by delaying nav event captures by 50ms
+        //However click + navigation can cause a race condition which can be handled by delaying nav event capture
         if (event?.type === 'navigation') {
-            event.timestamp = new Date().getTime();
             setTimeout(() => {
-                RecordingHelper.getRecording().then(recording => {
-                    let events = recording.getEvents();
-                    recording.events = [...events, event]
-                    chrome.storage.local.set({
-                        [RECORDING_KEY]: recording
-                    });
-                });
-            }, 50);
+                RecordingHelper.addEvent(event);
+            }, 250);
         }
     }
 }

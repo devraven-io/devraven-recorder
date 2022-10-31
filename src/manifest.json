@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DevRaven Recorder",
-  "version": "1.0",
+  "version": "1.1.1",
   "description": "Record browser interactions to create Playwright Tests and setup Synthetic Monitoring",
   "background": {
     "service_worker": "background.bundle.js"
