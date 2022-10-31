@@ -22,7 +22,7 @@ Just start recording and go through your browser flow, the recorder will automat
 
 This chrome extension will be available on Chrome Web Store very soon, following the review and publishing process. However, you may follow the steps below to side-load the extension to your browser instances.
 
-1. Download the [latest build zip](https://github.com/devraven-io/devraven-recorder/releases/download/v1.0/build.zip) file and extract the zip file on your machine.
+1. Download the [latest build zip](https://github.com/devraven-io/devraven-recorder/releases/latest/download/build.zip) file and extract the zip file on your machine.
 2. Navigate to chrome://extensions on your Chrome browser.
 3. Toggle developer mode on the top right.
 4. Click 'Load unpacked' button.
