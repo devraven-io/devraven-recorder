@@ -4,6 +4,19 @@ Credits:
 
 - The chrome extension is inspired by DeploySentinel Recorder(https://github.com/DeploySentinel/Recorder) which is available under Apache 2.0 license. It is fair to assume that this repo may include code derived from DeploySentinel Recorder.
 
+Original notice from DeploySentinel Recorder:
+
+----
+DeploySentinel Recorder
+
+Copyright 2021 DeploySentinel
+
+This software contains code derived from the Playwright project
+(https://github.com/microsoft/playwright), available under the Apache 2.0
+license (https://github.com/microsoft/playwright/blob/master/LICENSE).
+----
+
+
 - Icons from Heroicons(https://heroicons.com/) available under MIT license.
 
 - The repo uses Chrome Extension Boilerplate with React 17 and Webpack 5(https://github.com/lxieyang/chrome-extension-boilerplate-react) available under MIT license.
